@@ -25,18 +25,24 @@ I used both above sources for reference.
 If you are interested in exactly what is done here, but this solution looks too complicated - wait for Amazon Linux 2022, it will have pandoc and latex packages [natively](https://docs.aws.amazon.com/linux/al2022/release-notes/all-packages-al2022-20220105.html). 
 
 # Repo structure
-Dockerfile contains Docker image configuration
- --Dockerfile contains Docker image configuration
- --README.me - this readme file
- --texlive.profile - conatins profile for texlive installation in the DOcker image
- --S3_access_policy.json - policy to be attached to the lambda execution role
-  |-app
-     | - handler.py - Python code handling requests
-     | - testbook.epub a test epub document from Gutenberg project
-     | - testbook_2.epub another test document
-     | - ric.sh bash script that checks for the presence of lambda runtime, if not present uses emulator (needed for local testing outside of AWS)
-   |- figures 
-     | - architecture.png image showing the architecture
+
+```
+project
+│   README.md - this README file
+│   Dockerfile contains Docker image configuration   
+│   texlive.profile - conatins profile for texlive installation in the DOcker image
+│   S3_access_policy.json - policy to be attached to the lambda execution role
+│   
+└───app
+│   │   handler.py - Python code handling requests
+│   │   testbook.epub a test epub document from Gutenberg project
+│   │   testbook_2.epub another test document
+│   │   ric.sh bash script that checks for the presence of lambda runtime, if not present uses emulator (needed for local testing outside of AWS)
+│   
+└───figures
+    │   architecture.png image showing the architecture
+
+```
 
 
 # Usage

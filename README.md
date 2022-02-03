@@ -14,12 +14,12 @@ The architecture is shown in figure below.
 
 ![architecture](/figures/architecture.png)
 
-Structure of the Docker image and details of realisation are described in greater detail in a blog post.
+Structure of the Docker image and details of realisation are described in greater detail in a [blog post](https://andrey-shornikov.medium.com/custom-docker-image-as-a-lambda-function-eaad4bd28025)
 
 If you are interested in pandoc conversion only - there is an easier way of doing it with a lambda layer, without custom image.
 [Check this out](https://github.com/serverlesspub/pandoc-aws-lambda-binary)
 
-If you are interested in Latex alone - there is a simpler [alternative]. (https://github.com/samoconnor/lambdalatex) with lambda layers.
+If you are interested in Latex alone - there is a simpler [alternative] (https://github.com/samoconnor/lambdalatex) with lambda layers.
 I used both above sources for reference.
 
 If you are interested in exactly what is done here, but this solution looks too complicated - wait for Amazon Linux 2022, it will have pandoc and latex packages [natively](https://docs.aws.amazon.com/linux/al2022/release-notes/all-packages-al2022-20220105.html). 
